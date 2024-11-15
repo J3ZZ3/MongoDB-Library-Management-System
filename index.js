@@ -74,22 +74,22 @@ db.authors.deleteOne({ _id: 3 });
 
 //ADVANCED QUERIES WITH OPERATORS
 
-//Find Books Published After 1950 (Using $gt)
+//Find Books Published After 1950
 db.books.find({ published_year: { $gt: 1950 } });
 
-//Find All American Authors (Using $eq)
+//Find All American Authors
 
 
-//Set All Books To Available (Using $set)
+//Set All Books To Available
 db.books.updateMany({}, { $set: { available: true } });
 
 //Find All Books That Are Available And Published After 1950
-db.books.find({ available: true, published_year: { $gt: 1950 } });
+db.books.find({ available: true, published_year: { $gt: 1950 } })
 
-//Find authors whose names contain "George" (Using $regex)
+//Find authors whose names contain "George"
+db.authors.find({ name: { $regex: /George/ } })
 
-//Increment the published year of "1869" by 1 (Using $inc)
+//Increment the published year of "1869" by 1 
+db.books.updateOne({ published_year: 1869 }, { $inc: { published_year: 1 } })
 
-printjson( db.books.find( {} ) ) ;
-printjson( db.authors.find( {} ) ) ;
-printjson( db.patrons.find( {} ) ) ;
+
