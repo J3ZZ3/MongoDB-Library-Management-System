@@ -1,0 +1,11 @@
+{
+  "name": "mongodb-library-management-system",
+  "version": "1.0.0",
+  "description": "This project will perform the following CRUD Operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
